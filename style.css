@@ -1,0 +1,161 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(177, 177, 177);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 0 white;
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filters{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    margin-right: 10px;
+    flex: 1;
+    border: 1px solid black;
+    border-radius: 12px;
+
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    color: green;
+    border: 1px solid green;
+}
+
+button:hover {
+    background: #4cae4c;
+    color: white;
+    border: 1px solid white;
+}
+
+#entryList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#entryList li {
+    background: #949494a1;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#entryList > li > div:first-child{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+#entryList > li > div:last-child{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#entryList > li > div > span{
+    padding-top: 5px;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#entryList > li > div > button{
+    width: 80px;
+}
+#entryList > li > div > button:last-child{
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    color: red;
+    border: 1px solid red;
+}
+
+#entryList > li > div > button:last-child:hover{
+    background: red;
+    color: white;
+    border: 1px solid white;
+}
+
+.totals {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(49, 49, 49);
+}
+
+#totalIncome{
+    color: green;
+}
+
+#totalExpenses{
+    color: red;
+}
+
+#netBalance{
+    color: rgb(0, 89, 255);
+}
+
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+    }
+    #description{
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    #amount{
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    .filters{
+        margin-top: 20px;
+    }
+    #addEntry{
+        width: 30vw;
+        margin: 10px auto;
+
+    }
+    #entryList > li{
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+    }
+    #entryList > li > div:first-child{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+    #entryList > li > div:last-child{
+        width: 40vw;
+        margin: 0 auto;
+    }
+}
